@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h3.
+    posts
+  ul
+    each post, i in postlist
+      li#post_list_item
+        span #{post.words} #{post.score} points
