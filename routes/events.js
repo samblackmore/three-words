@@ -13,7 +13,10 @@ events.on('got-posts', function(db, context) {
     if (err)
       r.send(err);
     else if (result.length)
-      r.render('postlist', {'postlist': result});
+      r.render('story', {
+        'story': context.story,
+        'posts': result
+      });
     else
       r.send('No posts!');
 
@@ -31,7 +34,7 @@ events.on('got-new-post', function(db, context) {
     if (err)
       r.send(err);
     else
-      r.redirect('add');
+      r.redirect('posts');
 
     db.close();
   });

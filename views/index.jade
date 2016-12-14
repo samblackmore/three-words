@@ -2,7 +2,10 @@ extends layout
 
 block content
   p Welcome to #{title}
-  p Choose a story:
-  a Romance
-  br
-  a Horror
+  
+  p Start a story:
+  
+  form#form_add_story(name="addstory", method="post", action="/newstory")
+    input(type="text", placeholder="A Great Adventure", name="title")
+    input(type="text", placeholder="J. K. Mommy", name="author")
+    button#submit_story(type="submit") submit

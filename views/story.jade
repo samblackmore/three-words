@@ -1,0 +1,12 @@
+extends layout
+
+block content
+
+  h3 Story #{story}
+
+  each post, i in posts
+    span#post #{post.words} #{post.score} points
+    
+  form#form_add_post(name="addpost", method="post", action="/newpost")
+    input#my_words(type="text", placeholder="your 3 words", name="post")
+    button#submit_words(type="submit") submit

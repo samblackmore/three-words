@@ -1,7 +1,0 @@
-extends layout
-
-block content
-  h3= title
-  form#form_add_post(name="addpost", method="post", action="/newpost")
-    input#my_words(type="text", placeholder="a really big", name="post")
-    button#submit_words(type="submit") submit

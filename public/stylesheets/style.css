@@ -1,8 +1,17 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  font-family: "Crimson Text"
 }
 
 a {
   color: #00B7FF;
+}
+
+#post {
+  line-height: 200%;
+}
+
+#post:hover {
+  background-color: AntiqueWhite;
 }

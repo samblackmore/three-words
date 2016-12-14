@@ -8,13 +8,15 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.get('/add', function(req, res, next) {
-  res.render('newpost', { title: 'add post' });
+router.get('/story', function(req, res) {
+  res.redirect('/');
 });
 
-
-router.get('/posts', function(req, res) {
-  var context = {res: res}
+router.get('/story/:id', function(req, res) {
+  var context = {
+    res: res,
+    story: req.params.id
+  }
   withDb('got-posts', context);
 });
 
